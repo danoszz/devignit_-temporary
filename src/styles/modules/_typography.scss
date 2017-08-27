@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'GTWalsheimLight';
+  src: url('../assets/fonts/GTWalsheimLight.eot'),
+			 url('../assets/fonts/GTWalsheimLight.eot?#iefix') format('embedded-opentype'),
+			 url('../assets/fonts/GTWalsheimLight.woff') format('woff'),
+       url('../assets/fonts/GTWalsheimLight.ttf') format('truetype'),
+       url('../assets/fonts/GTWalsheimLight.svg#GTWalsheimLight') format('svg');
+  font-weight: lighter;
+  font-style: lighter;
+}
+
+@font-face {
+  font-family: 'GiovanniStd-Bold';
+  src: url('../assets/fonts/GiovanniStd-Bold.eot'),
+			 url('../assets/fonts/GiovanniStd-Bold.eot?#iefix') format('embedded-opentype'),
+			 url('../assets/fonts/GiovanniStd-Bold.woff') format('woff'),
+       url('../assets/fonts/GiovanniStd-Bold.ttf') format('truetype'),
+       url('../assets/fonts/GiovanniStd-Bold.svg#GiovanniStd-Bold') format('svg');
+  font-weight: bold;
+  font-style: bold;
+}
+
+$font--sans: 'GTWalsheimLight', 'Helvetica', sans-serif;
+$font--serif: 'GiovanniStd-Bold', 'Georgia', serif;
+
+// SASS Mixin by Mataj of Better Web Typography
+
+@import '../mixins/_bwt-mixin.scss';
+
+// Custom Adjustments
+
+body {
+  text-rendering: geometricPrecision;
+	font-family: $font--sans;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font--serif;
+  }
+  h1:first-child {
+    @include margin-top(0);
+  }
+	li {
+		@include margin-bottom(0.5);
+	}
+}
