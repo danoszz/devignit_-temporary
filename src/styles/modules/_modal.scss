@@ -1,10 +1,18 @@
-#modal-info {
-	position: absolute;
-	height: 100%;
+.modal-info {
+	position: relative;
+	height: 100vh;
 	width: 100%;
 	padding: $column--width / 2;
 	background-color: white;
-	transition: 300ms ease-in-out;
+
+  transition: 1s ease-in-out;
+  transform: translate(200px, 0);
+
+  &.visible {
+    transform: translate(0, 0);
+  }
+
+//	transition: 300ms ease-in-out;
 	//overflow: hidden;
 	.info-modal--text-container {
 		text-align: justify;
@@ -39,7 +47,6 @@
 		align-items: center;
 		z-index: 2;
 		transition: $delay__1 $transition--smooth;
-		// animation: 400ms 800ms $transition--smooth slideOut forwards;
 		a,
 		span {
 			text-decoration: none;
@@ -50,27 +57,29 @@
 		}
 	}
 
-	&:after {
-		content: '';
-		background-color: $black;
-		width: $column--width / 2;
-		height: $column--width;
-		position: absolute;
-		bottom: $column--width / 2;
-		right: 0;
-	}
 	@media screen and (min-width: $phablet-breakpoint) {
+			position: absolute;
 		width: $column--width * 7;
 		height: $column--width * 7;
 		padding: $column--width;
-		right: $column--width__flex * 2;
+		//top: $column--width * 2;
+		right: $column--width * 2;
 		bottom: 0;
-	}
-}
 
-#toggle-modal {
-	position: absolute;
-	bottom: 50px;
-	right: 50px;
-	color: white;
+		.info-modal--button {
+			bottom: $column--width / 1.25;
+
+		}
+
+			&:after {
+				content: '';
+				background-color: $black;
+				width: $column--width / 2;
+				height: $column--width;
+				position: absolute;
+				bottom: $column--width / 1.25;
+				right: 0;
+			}
+
+	}
 }

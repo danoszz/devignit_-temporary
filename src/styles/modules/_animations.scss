@@ -1,75 +1,58 @@
 // Animations for each module
-$transition--smooth: cubic-bezier(.2,.88,.52,1);
+//$transition--smooth: cubic-bezier(.2,.88,.52,1);
+ $transition--smooth: cubic-bezier(0.86, 0, 0.07, 1);
 $ratio: 1.65;
+$delay__main: 1860ms;
 $delay__1: 165ms;
 $delay__2: $delay__1 * $ratio;
 $delay__3: $delay__2 * $ratio;
 $delay__4: $delay__3 * $ratio;
 $delay__5: $delay__4 * $ratio;
-$delay--total: ($delay__1 + $delay__2 + $delay__3 + $delay__4 + $delay__5) / 6;
+$delay--total: ($delay__1 + $delay__2 + $delay__3 + $delay__4 + $delay__5) / 5;
 $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 
-#modal-info {
-	&.i-am {
-    //visibility: hidden;
-    // opacity: 0;
-		transform-origin: 50% 0%;
-		animation: $delay__1 $transition--smooth fadeOutModal forwards;
+.modal-info {
+	opacity: 0;
+	visibility: hidden;
+	transform-origin: 0 100%;
+	animation: ($delay--total * 1.5) $transition--smooth ($delay__main / $ratio) fadeInModal forwards;
 
-		.info-modal--text-container * {
+	.info-modal--text-container {
+		* {
 			opacity: 0;
-			transform-origin: 50% 0%;
-
-		//	transition: $delay__1 $transition--smooth fadeInBottom backwards;
+			transform-origin: 50% 0;
+			animation: $fadeinBottom;
+			animation-delay: $delay__main;
 		}
 
-		.info-modal--button {
-			animation: 400ms $transition--smooth slideIn forwards;
-			span {
-				opacity: 0;
-			}
+		h1 {
+			animation-delay: $delay__main + $delay__1;
 		}
 
-		&.visible {
+		p:nth-child(2) {
+			animation-delay: $delay__main + $delay__2;
+		}
 
-			animation: $delay__1 $transition--smooth fadeInModal forwards;
+		p:nth-child(3) {
+			animation-delay: $delay__main + $delay__3;
+		}
 
-			.info-modal--text-container * {
-				animation: $fadeinBottom;
-				animation-delay: $delay__1;
-				animation-timing-function: $transition--smooth;
-			}
-			.info-modal--button {
-				animation: $delay--total $transition--smooth slideOut forwards;
-				animation-delay: $delay__5;
-				span {
-					animation: $delay--total $transition--smooth fadeIn forwards;
-					animation-delay: $delay__5 * 1.4;
+		.text-container__links {
+			@for $i from 1 to 8 {
+				li:nth-child(#{$i}) {
+					animation-delay: ($delay__main + $delay__3) + ($i * $delay__1 / ($ratio * 2));
 				}
 			}
+		}
+	}
 
+	.info-modal--button {
+		animation: $delay--total $transition--smooth slideOut forwards;
+		animation-delay: $delay__main + $delay__5;
 
-			.info-modal--text-container {
-				h1 {
-					animation-delay: $delay__1;
-				}
-
-				p:nth-child(2) {
-					animation-delay: $delay__2;
-				}
-
-				p:nth-child(3) {
-					animation-delay: $delay__3;
-				}
-
-				.text-container__links {
-					@for $i from 1 to 8 {
-						li:nth-child(#{$i}) {
-							animation-delay: $delay__3 + ($i * $delay__1 / ($ratio * 2));
-						}
-					}
-				}
-			}
+		span {
+			animation: $delay--total $transition--smooth fadeIn forwards;
+			animation-delay: ($delay__main + $delay__5) * ($ratio / 2);
 		}
 	}
 }
@@ -92,26 +75,24 @@ $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 	0% {
 		opacity: 0;
 		visibility: hidden;
-			transform: scaleY(0);
+		transform: scaleY(0);
 		//transform: translateY($column--width / 2);
 	}
 
-	80% {
+	10% {
 		opacity: 1;
 		visibility: visible;
 	}
 
 	100% {
 		opacity: 1;
-				visibility: visible;
-					transform: scaleY(1);
-	//	transform: translateY(0);
+		visibility: visible;
+		transform: scaleY(1);
+		//	transform: translateY(0);
 	}
 }
-
 @keyframes fadeOutModal {
 	0% {
-
 		opacity: 1;
 		visibility: visible;
 		transform: scaleY(1);
@@ -119,7 +100,7 @@ $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 	}
 
 	80% {
-	//	opacity: 0;
+		//	opacity: 0;
 		visibility: visible;
 	}
 
@@ -133,8 +114,6 @@ $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 @keyframes fadeOutTop {
 	0% {
 		opacity: 1;
-
-
 	}
 
 	80% {
@@ -143,7 +122,6 @@ $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 
 	100% {
 		opacity: 0;
-
 	}
 }
 @keyframes slideIn {
@@ -151,7 +129,6 @@ $fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;
 		transform: translateX(0);
 	}
 }
-
 @keyframes slideOut {
 	100% {
 		transform: translateX($column--width / 2);

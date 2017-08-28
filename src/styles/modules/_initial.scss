@@ -5,27 +5,69 @@
 }
 
 body {
-	// display: flex;
-	// justify-content: center;
-	// align-items: center;
 	min-height: 100vh;
 	background-color: $black;
+	display: flex;
+	flex-direction: column-reverse;
+	overflow-x: hidden;
+@media screen and (min-width: $phablet-breakpoint) {
+	display: initial;
+		overflow: hidden;
+	}
+}
+
+.logo-devign {
+	position: absolute;
+	// height: $column--width * 2;
+	// width: $column--width * 2;
+	top: $column--width / 2;
+	right: $column--width / 2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+
+	svg {
+		height: $column--width / 2;
+		path {
+			fill: $white;
+		}
+	}
+	@media screen and (min-width: $phablet-breakpoint) {
+		height: $column--width * 2;
+		width: $column--width * 2;
+		right: 0;
+		top: 0;
+		svg {
+			path {
+				fill: $white;
+			}
+		}
+	}
 }
 
 .canvas--background {
-	width: $column--width__flex * 8;
+	width: $column--width__flex * 12;
 	height: 100vh;
-	position: absolute;
-	z-index: -1;
-	left: 0;
 	background-color: $black;
 
-	&:after {
-		content: '';
+
+	@media screen and (min-width: $phablet-breakpoint) {
 		position: absolute;
-		height: 100%;
-		width: 100%;
+		z-index: -1;
 		left: 0;
-		background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 80%, $black 100%);
-	}
+		width: $column--width__flex * 8;
+		height: 100vh;
+
+
+			&:after {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				left: 0;
+				background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 80%, $black 100%);
+			}
+
+		}
 }
