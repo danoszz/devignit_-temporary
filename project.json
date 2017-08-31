@@ -1,6 +1,6 @@
 {
     "foldersName": {
-        "entry" : "src",  
+        "entry" : "src",
         "build" :  "build"
     },
     "env": {
@@ -20,9 +20,9 @@
         },
         "live": {
             "siteURL": "",
-            "baseURL": "/three-js-audio/",
-            "scriptURL": "/three-js-flag/",
-            "assetsURL": "/three-js-flag/assets/",
+            "baseURL": "",
+            "scriptURL": "",
+            "assetsURL": "/assets/",
             "env" : "live"
         }
     },
