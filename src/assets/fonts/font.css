@@ -1,9 +1,0 @@
-@font-face {
-  font-family: 'GiovanniStd-Bold';
-  src: url('GiovanniStd-Bold.woff') format('woff'),
-       url('GiovanniStd-Bold.ttf') format('truetype'),
-       url('GiovanniStd-Bold.svg#GiovanniStd-Bold') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-

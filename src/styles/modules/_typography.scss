@@ -9,19 +9,23 @@
   font-style: lighter;
 }
 
+
 @font-face {
-  font-family: 'GiovanniStd-Bold';
-  src: url('../assets/fonts/GiovanniStd-Bold.eot'),
-			 url('../assets/fonts/GiovanniStd-Bold.eot?#iefix') format('embedded-opentype'),
-			 url('../assets/fonts/GiovanniStd-Bold.woff') format('woff'),
-       url('../assets/fonts/GiovanniStd-Bold.ttf') format('truetype'),
-       url('../assets/fonts/GiovanniStd-Bold.svg#GiovanniStd-Bold') format('svg');
+  font-family: 'Perpetua-Bold';
+  src: url('../assets/fonts/Perpetua-Bold.eot'),
+			 url('../assets/fonts/Perpetua-Bold.eot?#iefix') format('embedded-opentype'),
+			 url('../assets/fonts/Perpetua-Bold.woff') format('woff'),
+       url('../assets/fonts/Perpetua-Bold.ttf') format('truetype'),
+       url('../assets/fonts/Perpetua-Bold.svg#Perpetua-Bold') format('svg'),
+       url('../assets/fonts/Perpetua-Bold.eot?#iefix') format('embedded-opentype');
   font-weight: bold;
   font-style: bold;
 }
 
+
+
 $font--sans: 'GTWalsheimLight', 'Helvetica', sans-serif;
-$font--serif: 'GiovanniStd-Bold', 'Georgia', serif;
+$font--serif: 'Perpetua-Bold', 'Georgia', serif;
 
 // SASS Mixin by Mataj of Better Web Typography
 
@@ -33,6 +37,7 @@ body {
   text-rendering: geometricPrecision;
 	font-family: $font--sans;
   h1, h2, h3, h4, h5, h6 {
+		font-variant-ligatures: discretionary-ligatures;
     font-family: $font--serif;
   }
   h1:first-child {
