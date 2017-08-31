@@ -1,7 +1,7 @@
 # Devign temporary
 
 Temporary page for Devign.it until the full website is finished.
-Based on [Playground Starterkit](https://github.com/Corentinfardeau/three-js-flag) from (http://corentinfardeau.fr/).
+Based on [Playground Starterkit](https://github.com/Corentinfardeau/three-js-flag) from [Corentin](http://corentinfardeau.fr/).
 
 Following instructions are copied from the original README.md. Please contact me if you have any further questions <3
 
