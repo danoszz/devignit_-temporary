@@ -4,37 +4,23 @@ $white: #fff;
 $blue: #0000ED;
 
 // Sizes
-$column--width: 80px;
+$column--width: 70px;
 $column--width__flex: 100vw / 12;
 
 
 // Responsive
-$phablet-breakpoint: 37em;
-$tablet-breakpoint: 48em;
-$desktop-breakpoint: 64em;
-$large-desktop-breakpoint: 80em;
+$small-phone-breakpoint: 22em; // if base-pixel = 16 -> $column--width * 5 = 350px ~~ 22em
+$phablet-breakpoint: 35em; // if base-pixel = 16 -> $column--width * 8 = 560px ~~ 35em
+$tablet-breakpoint: 48em; // idc
+$desktop-breakpoint: 64em; // ~
+$large-desktop-breakpoint: 80em; // aka compensate screen
 
 // Typography
 
-$base-font-size: 90; // Gets used as %
-$base-font-size-desktop: 92.5;
+$base-font-size: 94; // Gets used as %
+$base-font-size-desktop: 98;
 $line-height: 1.4;
 $line-height-desktop: 1.45;
 $base: ($base-font-size / 100); // We'll need this for some calculations
 
 $ratio: 1.5; // Perfect Fifth // Modular scale
-
-// Animation
-
-// cubic-bezier(.37,.07,.65,.97)
-
-$transition--smooth: cubic-bezier(.2,.88,.52,1);
-
-//$ratio: 1.6;
-$delay__1: 165ms;
-$delay__2: $delay__1 * $ratio;
-$delay__3: $delay__2 * $ratio;
-$delay__4: $delay__3 * $ratio;
-$delay__5: $delay__4 * $ratio;
-$delay--total: ($delay__1 + $delay__2 + $delay__3 + $delay__4 + $delay__5) / 6;
-$fadeinBottom: $delay--total $transition--smooth fadeInBottom forwards;

@@ -220,36 +220,20 @@ class App {
 class Functions {
 	constructor() {
 
-		let emojiSpan = document.querySelector('.info-modal--button');
+		let emojiSpan = document.querySelector('.info-modal--button span');
 		let emojiArray = [
 			'🥑',
 			'💥',
-			'👀',
 			'⚡️',
-			'🗿',
+			'👋',
+			'👋🏽',
 			'🏖',
-			'🥝'
+			'🛰'
 		];
 		let choosenEmoji = emojiArray[Math.floor(Math.random() * emojiArray.length) + 0];
 
 		emojiSpan.appendChild(document.createTextNode(choosenEmoji));
 
-		let messagesGone = ['Don\'t ditch me', 'Come back please', 'Ignoring me?', 'I\'m gonna cry', 'Getting drunk brb'];
-		let original;
-
-		const sections = document.querySelectorAll('.modal-info');
-
-		window.onscroll = function() {
-		  // Don't run the rest of the code if every section is already visible
-		  if (document.querySelectorAll('.modal-info:not(.visible)').length === 0) return;
-
-		  // Run this code for every section in sections
-		  for (const section of sections) {
-		    if (section.getBoundingClientRect().top <= window.innerHeight * 0.75 && section.getBoundingClientRect().top > 0) {
-		      section.classList.add('visible');
-		    }
-		  }
-		};
 
 	}
 }

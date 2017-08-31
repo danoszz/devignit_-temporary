@@ -4,15 +4,7 @@
 	width: 100%;
 	padding: $column--width / 2;
 	background-color: white;
-
-  transition: 1s ease-in-out;
-  transform: translate(200px, 0);
-
-  &.visible {
-    transform: translate(0, 0);
-  }
-
-//	transition: 300ms ease-in-out;
+	//	transition: 300ms ease-in-out;
 	//overflow: hidden;
 	.info-modal--text-container {
 		text-align: justify;
@@ -20,9 +12,11 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		max-width: $column--width * 8;
+		max-width: $column--width * 6;
 
 		.text-container__links {
+			margin: 0;
+			padding: 0;
 			columns: 2;
 			column-gap: $column--width / 2;
 			list-style: none;
@@ -46,40 +40,48 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 2;
-		transition: $delay__1 $transition--smooth;
+
 		a,
 		span {
 			text-decoration: none;
 			color: $black;
-			transform: rotate(90deg);
+			//transform: rotate(90deg);
 			margin: 0 auto;
 			line-height: initial;
 		}
 	}
-
-	@media screen and (min-width: $phablet-breakpoint) {
-			position: absolute;
-		width: $column--width * 7;
-		height: $column--width * 7;
+	@media screen and (min-width: $small-phone-breakpoint) {
+		padding: $column--width / 1.5;
+	}
+	@media screen and (min-width: $small-phone-breakpoint) and (max-width: $phablet-breakpoint) and (max-height: $small-phone-breakpoint * 1.5), handheld and (orientation: landscape), screen and (max-height: $small-phone-breakpoint * 1.5) {
+		min-height: 100vh;
+		height: initial;
+	}
+	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8) {
+		position: absolute;
+		width: $column--width * 8;
+		height: $column--width * 8;
 		padding: $column--width;
-		//top: $column--width * 2;
 		right: $column--width * 2;
 		bottom: 0;
 
-		.info-modal--button {
-			bottom: $column--width / 1.25;
-
+		&:after {
+			content: '';
+			background-color: $black;
+			width: $column--width / 2;
+			height: $column--width;
+			position: absolute;
+			bottom: $column--width / 2;
+			right: 0;
 		}
 
-			&:after {
-				content: '';
-				background-color: $black;
-				width: $column--width / 2;
-				height: $column--width;
-				position: absolute;
-				bottom: $column--width / 1.25;
-				right: 0;
-			}
-
+		 &:after,
+		.info-modal--button {
+			bottom: $column--width;
+		}
+	}
+	@media screen and (min-width: $tablet-breakpoint) and (min-height: $tablet-breakpoint) {
+		padding: $column--width;
+		height: 50vh;
 	}
 }
