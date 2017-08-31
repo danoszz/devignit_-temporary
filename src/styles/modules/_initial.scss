@@ -1,30 +1,32 @@
-
 html {
-    box-sizing: border-box;
-    border-collapse: collapse;
-    line-height: 1;
-    -moz-osx-font-smoothing: grayscale
+	box-sizing: border-box;
+	border-collapse: collapse;
+	line-height: 1;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 * {
-    border-collapse: inherit
+	border-collapse: inherit;
 }
 
-*,:after,:before {
-    box-sizing: inherit
+*,
+:after,
+:before {
+	box-sizing: inherit;
 }
 
 :not(body) {
-    background-position: 50%;
-    background-size: cover
+	background-position: 50%;
+	background-size: cover;
 }
+
 body {
 	min-height: 100vh;
 	background-color: $black;
 	display: flex;
 	flex-direction: column-reverse;
 	overflow-x: hidden;
-@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8)    {
+	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8) {
 		display: initial;
 		overflow: hidden;
 	}
@@ -38,18 +40,19 @@ body {
 	justify-content: center;
 	align-items: center;
 
-
 	svg {
 		height: $column--width / 2;
+
 		path {
 			fill: $white;
 		}
 	}
-	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8)  {
+	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8) {
 		height: $column--width * 2;
 		width: $column--width * 2;
 		right: 0;
 		top: 0;
+
 		svg {
 			path {
 				fill: $white;
@@ -57,6 +60,7 @@ body {
 		}
 	}
 }
+
 .scroll-indicator__down {
 	position: absolute;
 	background-color: $white;
@@ -65,36 +69,30 @@ body {
 	height: $column--width;
 	width: 1px;
 	display: block;
-		@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8)   {
+	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8) {
 		display: none;
-		}
+	}
 }
 
 .canvas--background {
-
 	width: $column--width__flex * 12;
 	height: 100vh;
 	background-color: $black;
-
-
-
-	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8)  {
+	@media screen and (min-width: $phablet-breakpoint) and (min-aspect-ratio: 1/1) and (min-height: $column--width * 8) {
 		position: absolute;
 		z-index: -1;
 		left: 0;
 		width: $column--width__flex * 8;
 		height: 100vh;
 
-
-			&:after {
-				content: '';
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				left: 0;
-        z-index: 2;
-				background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 80%, $black 100%);
-			}
-
+		&:before {
+			content: '';
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			left: 0;
+			z-index: 2;
+			background-image: linear-gradient(90deg, rgba(0,0,0,0.00) 80%, $black 100%);
 		}
+	}
 }
