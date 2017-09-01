@@ -1,13 +1,14 @@
 # Devign temporary
 
 Temporary page for Devign.it until the full website is finished.
-Based on [Playground Starterkit](https://github.com/Corentinfardeau/three-js-flag) from [Corentin](http://corentinfardeau.fr/).
+Based on [Playground Starterkit](https://github.com/Corentinfardeau/three-js-flag) from [Corentin](http://corentinfardeau.fr/). Although I'd like to wrote all the Three.js code myself; I couldn't. Big s/o to [Vaalentin](http://vaalentin.github.io/) for the awesome dissolving background.
 
 Following instructions are copied from the original README.md. Please contact me if you have any further questions <3
 
 ## Including
 * [Gulp](http://gulpjs.com/)
 * [Sass](http://sass-lang.com/)
+* [Three.js](https://threejs.org/)
 * [GSAP](http://greensock.com/gsap)
 * [Browserify](http://browserify.org/)
 * [Browsersync](https://www.browsersync.io/)
