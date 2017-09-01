@@ -45788,6 +45788,6 @@ var Functions = function Functions() {
 new App();
 //new Functions();
 
-},{"three":1,"underscore":2}]},{},[3]);
+},{"three":1,"underscore":2}]},{},[3])
 
 //# sourceMappingURL=app.js.map

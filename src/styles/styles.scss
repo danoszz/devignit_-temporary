@@ -1,7 +1,29 @@
-@import 'modules/_normalize.scss';
-@import 'modules/_variables.scss';
-@import 'modules/_initial.scss';
-@import 'modules/_typography.scss';
-@import 'modules/_links.scss';
-@import 'modules/_modal.scss';
-@import 'modules/_animations.scss';
+// Variables
+// ---------
+@import 'variables/variables';
+
+// Libraries and mixins
+// --------------------
+@import 'lib/normalize';
+@import 'mixins/betterwebtypography';
+
+// Base and custom resets
+// ----------------------
+@import 'base/base';
+
+// Layouts
+// -------
+@import 'layouts/body';
+
+// Objects
+// -------
+@import 'objects/links';
+@import 'objects/animations';
+@import 'objects/typography';
+
+// Components
+// ----------
+@import 'components/modal';
+@import 'components/logo';
+@import 'components/canvas';
+@import 'components/scrollindicator';

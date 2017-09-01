@@ -390,104 +390,6 @@ template {
   display: none; }
 
 html {
-  box-sizing: border-box;
-  border-collapse: collapse;
-  line-height: 1;
-  -moz-osx-font-smoothing: grayscale; }
-
-* {
-  border-collapse: inherit; }
-
-*,
-:after,
-:before {
-  box-sizing: inherit; }
-
-:not(body) {
-  background-position: 50%;
-  background-size: cover; }
-
-body {
-  min-height: 100vh;
-  background-color: #000;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse;
-  overflow-x: hidden; }
-  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
-    body {
-      display: initial;
-      overflow: hidden; } }
-
-.logo-devign {
-  position: absolute;
-  top: 35px;
-  right: 35px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
-  .logo-devign svg {
-    height: 35px; }
-    .logo-devign svg path {
-      fill: #fff; }
-  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
-    .logo-devign {
-      height: 140px;
-      width: 140px;
-      right: 0;
-      top: 0; }
-      .logo-devign svg path {
-        fill: #fff; } }
-
-.scroll-indicator__down {
-  position: absolute;
-  background-color: #fff;
-  bottom: 0;
-  left: calc(50% - 1px);
-  height: 70px;
-  width: 1px;
-  display: block; }
-  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
-    .scroll-indicator__down {
-      display: none; } }
-
-.canvas--background {
-  width: 100vw;
-  height: 100vh;
-  background-color: #000; }
-  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
-    .canvas--background {
-      position: absolute;
-      z-index: -1;
-      left: 0;
-      width: 66.66667vw;
-      height: 100vh; }
-      .canvas--background:before {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        left: 0;
-        z-index: 2;
-        background-image: linear-gradient(90deg, transparent 80%, #000 100%); } }
-
-@font-face {
-  font-family: 'GTWalsheimLight';
-  src: url("../assets/fonts/GTWalsheimLight.eot"), url("../assets/fonts/GTWalsheimLight.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GTWalsheimLight.woff") format("woff"), url("../assets/fonts/GTWalsheimLight.ttf") format("truetype"), url("../assets/fonts/GTWalsheimLight.svg#GTWalsheimLight") format("svg");
-  font-weight: lighter;
-  font-style: lighter; }
-
-@font-face {
-  font-family: 'Perpetua-Bold';
-  src: url("../assets/fonts/Perpetua-Bold.eot"), url("../assets/fonts/Perpetua-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Perpetua-Bold.woff") format("woff"), url("../assets/fonts/Perpetua-Bold.ttf") format("truetype"), url("../assets/fonts/Perpetua-Bold.svg#Perpetua-Bold") format("svg"), url("../assets/fonts/Perpetua-Bold.eot?#iefix") format("embedded-opentype");
-  font-weight: bold;
-  font-style: bold; }
-
-html {
   font-size: 94%; }
   @media screen and (min-width: 48em) {
     html {
@@ -508,7 +410,7 @@ h1, h2, h3, h4, h5, p, a, blockquote {
       margin-top: 0rem; } }
 
 h1 {
-  font-size: 2.115rem;
+  font-size: 2.55915rem;
   line-height: 2.1rem;
   margin-top: 1.4rem;
   margin-bottom: 1.4rem; }
@@ -523,7 +425,7 @@ h1 {
       margin-bottom: 1.45rem; } }
 
 h2 {
-  font-size: 1.41rem;
+  font-size: 1.551rem;
   line-height: 2.1rem;
   margin-top: 2.8rem;
   margin-bottom: 0.7rem; }
@@ -597,29 +499,43 @@ h6 {
     h6 {
       margin-bottom: 0rem; } }
 
+html {
+  box-sizing: border-box;
+  border-collapse: collapse;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000; }
+
+* {
+  border-collapse: inherit; }
+
+*,
+:after,
+:before {
+  box-sizing: inherit; }
+
+:not(body) {
+  background-position: 50%;
+  background-size: cover; }
+
 body {
-  text-rendering: geometricPrecision;
-  font-family: "GTWalsheimLight", "Helvetica", sans-serif; }
-  body h1, body h2, body h3, body h4, body h5, body h6 {
-    font-variant-ligatures: discretionary-ligatures;
-    font-family: "Perpetua-Bold", "Georgia", serif; }
-  body h1:first-child {
-    margin-top: 0rem; }
-    @media screen and (min-width: 48em) {
-      body h1:first-child {
-        margin-top: 0rem; } }
-  body li {
-    margin-bottom: 0.7rem; }
-    @media screen and (min-width: 48em) {
-      body li {
-        margin-bottom: 0.725rem; } }
+  min-height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+  overflow-x: hidden; }
+  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
+    body {
+      display: initial;
+      overflow: hidden; } }
 
 li a,
 p a {
-  color: #000;
+  color: #000000;
   text-decoration: none;
-  background-image: linear-gradient(to top, transparent, transparent 2.5px, #000 2.5px, #000 3.5px, transparent 3.5px);
-  text-shadow: -2px 0 #fff, 0px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+  background-image: linear-gradient(to top, transparent, transparent 2.5px, #000000 2.5px, #000000 3.5px, transparent 3.5px);
+  text-shadow: -2px 0 #ffffff, 0px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
   li a:focus, li a:hover,
   p a:focus,
   p a:hover {
@@ -627,85 +543,6 @@ p a {
     -webkit-text-decoration-color: #0000ED;
             text-decoration-color: #0000ED;
     background-image: linear-gradient(to top, transparent, transparent 2.5px, #0000ED 2.5px, #0000ED 3.5px, transparent 3.5px); }
-
-.modal-info {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  padding: 35px;
-  background-color: white; }
-  .modal-info .info-modal--text-container {
-    text-align: justify;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-        flex-direction: column;
-    height: 100%;
-    max-width: 420px; }
-    .modal-info .info-modal--text-container .text-container__links {
-      margin: 0;
-      padding: 0;
-      columns: 2;
-      column-gap: 35px;
-      list-style: none;
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-      margin-top: auto; }
-      .modal-info .info-modal--text-container .text-container__links li:nth-child(3n) {
-        margin-bottom: -5px; }
-  .modal-info .info-modal--button {
-    background-color: #fff;
-    width: 35px;
-    height: 70px;
-    position: absolute;
-    bottom: 35px;
-    right: 0;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex-align: center;
-        align-items: center;
-    z-index: 2; }
-    .modal-info .info-modal--button a,
-    .modal-info .info-modal--button span {
-      text-decoration: none;
-      color: #000;
-      margin: 0 auto;
-      line-height: initial; }
-  @media screen and (min-width: 22em) {
-    .modal-info {
-      padding: 46.66667px; } }
-  @media screen and (min-width: 22em) and (max-width: 35em) and (max-height: 33em), handheld and (orientation: landscape), screen and (max-height: 33em) {
-    .modal-info {
-      min-height: 100vh;
-      height: initial; } }
-  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
-    .modal-info {
-      position: absolute;
-      width: 560px;
-      height: 560px;
-      padding: 70px;
-      right: 140px;
-      bottom: 0; }
-      .modal-info:after {
-        content: '';
-        background-color: #000;
-        width: 35px;
-        height: 70px;
-        position: absolute;
-        bottom: 35px;
-        right: 0; }
-      .modal-info:after,
-      .modal-info .info-modal--button {
-        bottom: 70px; } }
-  @media screen and (min-width: 48em) and (min-height: 48em) {
-    .modal-info {
-      padding: 70px; } }
 
 .modal-info {
   opacity: 0;
@@ -787,3 +624,166 @@ p a {
   100% {
     transform-origin: center bottom;
     transform: scale(1, 1); } }
+
+@font-face {
+  font-family: 'GTWalsheimLight';
+  src: url("../assets/fonts/GTWalsheimLight.eot"), url("../assets/fonts/GTWalsheimLight.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/GTWalsheimLight.woff") format("woff"), url("../assets/fonts/GTWalsheimLight.ttf") format("truetype"), url("../assets/fonts/GTWalsheimLight.svg#GTWalsheimLight") format("svg");
+  font-weight: lighter;
+  font-style: lighter; }
+
+@font-face {
+  font-family: 'Perpetua-Bold';
+  src: url("../assets/fonts/Perpetua-Bold.eot"), url("../assets/fonts/Perpetua-Bold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Perpetua-Bold.woff") format("woff"), url("../assets/fonts/Perpetua-Bold.ttf") format("truetype"), url("../assets/fonts/Perpetua-Bold.svg#Perpetua-Bold") format("svg"), url("../assets/fonts/Perpetua-Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: bold;
+  font-style: bold; }
+
+body {
+  text-rendering: geometricPrecision;
+  font-family: "GTWalsheimLight", "Helvetica", sans-serif; }
+  body h1, body h2, body h3, body h4, body h5, body h6 {
+    font-variant-ligatures: discretionary-ligatures;
+    font-family: "Perpetua-Bold", "Georgia", serif; }
+  body h1:first-child {
+    margin-top: 0rem; }
+    @media screen and (min-width: 48em) {
+      body h1:first-child {
+        margin-top: 0rem; } }
+  body li {
+    margin-bottom: 0.7rem; }
+    @media screen and (min-width: 48em) {
+      body li {
+        margin-bottom: 0.725rem; } }
+
+.modal-info {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding: 35px;
+  background-color: white; }
+  .modal-info .info-modal--text-container {
+    text-align: justify;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    height: 100%;
+    max-width: 420px; }
+    .modal-info .info-modal--text-container .text-container__links {
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 35px;
+      list-style: none;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin-top: auto; }
+      .modal-info .info-modal--text-container .text-container__links li:nth-child(3n) {
+        margin-bottom: -5px; }
+  .modal-info .info-modal--button {
+    background-color: #ffffff;
+    width: 35px;
+    height: 70px;
+    position: absolute;
+    bottom: 35px;
+    right: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    z-index: 2; }
+    .modal-info .info-modal--button a,
+    .modal-info .info-modal--button span {
+      text-decoration: none;
+      color: #000000;
+      margin: 0 auto;
+      line-height: initial; }
+  @media screen and (min-width: 22em) {
+    .modal-info {
+      padding: 46.66667px; } }
+  @media screen and (min-width: 22em) and (max-width: 35em) and (max-height: 33em), handheld and (orientation: landscape), screen and (max-height: 33em) {
+    .modal-info {
+      min-height: 100vh;
+      height: initial; } }
+  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
+    .modal-info {
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      padding: 70px;
+      right: 140px;
+      bottom: 0; }
+      .modal-info:after {
+        content: '';
+        background-color: #000000;
+        width: 35px;
+        height: 70px;
+        position: absolute;
+        bottom: 35px;
+        right: 0; }
+      .modal-info:after,
+      .modal-info .info-modal--button {
+        bottom: 70px; } }
+  @media screen and (min-width: 48em) and (min-height: 48em) {
+    .modal-info {
+      padding: 70px; } }
+
+.logo-devign {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+  .logo-devign svg {
+    height: 35px; }
+    .logo-devign svg path {
+      fill: #ffffff; }
+  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
+    .logo-devign {
+      height: 140px;
+      width: 140px;
+      right: 0;
+      top: 0; }
+      .logo-devign svg path {
+        fill: #ffffff; } }
+
+.canvas--background {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000; }
+  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
+    .canvas--background {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      width: 66.66667vw;
+      height: 100vh; }
+      .canvas--background:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        z-index: 2;
+        background-image: linear-gradient(90deg, transparent 80%, #000000 100%); } }
+
+.scroll-indicator__down {
+  position: absolute;
+  background-color: #ffffff;
+  bottom: 0;
+  left: calc(50% - 1px);
+  height: 70px;
+  width: 1px;
+  display: block; }
+  @media screen and (min-width: 35em) and (min-aspect-ratio: 1 / 1) and (min-height: 560px) {
+    .scroll-indicator__down {
+      display: none; } }

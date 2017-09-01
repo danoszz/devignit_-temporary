@@ -7,7 +7,8 @@ var gulp 		 = require('gulp'),
 	config 		 = require('../config');
 
 gulp.task('styles', function(){
-  gulp.src([config.cssEntry + '**/*.scss'])
+  // gulp.src([config.cssEntry + '**/*.scss'])
+	gulp.src([config.cssEntry + '*.scss'])
 	.pipe(sass())
 	.pipe(autoprefixer('last 2 versions'))
 	.pipe(gulp.dest(config.cssDest))
