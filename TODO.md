@@ -1,6 +1,6 @@
 # Personal To-do list
 
-0. add links
+0. add links // done
 1. scroll-indicator__down 100vh bug absolute bottom
 2. OG:metadata images etc
 3. SEO ready + Google Analytics
