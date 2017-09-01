@@ -726,6 +726,8 @@ body {
         position: absolute;
         bottom: 35px;
         right: 0; }
+      .modal-info .info-modal--button {
+        right: 35px; }
       .modal-info:after,
       .modal-info .info-modal--button {
         bottom: 70px; } }

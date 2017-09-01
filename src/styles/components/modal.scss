@@ -75,7 +75,11 @@
 			right: 0;
 		}
 
-		 &:after,
+		.info-modal--button {
+			right: $column--width / 2;
+		}
+
+		&:after,
 		.info-modal--button {
 			bottom: $column--width;
 		}
