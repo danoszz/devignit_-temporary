@@ -64,16 +64,16 @@
 		padding: $column--width;
 		right: $column--width * 2;
 		bottom: 0;
-
-		&:after {
-			content: '';
-			background-color: $black;
-			width: $column--width / 2;
-			height: $column--width;
-			position: absolute;
-			bottom: $column--width / 2;
-			right: 0;
-		}
+		//
+		// &:after {
+		// 	content: '';
+		// 	background-color: $black;
+		// 	width: $column--width / 2;
+		// 	height: $column--width;
+		// 	position: absolute;
+		// 	bottom: $column--width / 2;
+		// 	right: 0;
+		// }
 
 		.info-modal--button {
 			right: $column--width / 2;
