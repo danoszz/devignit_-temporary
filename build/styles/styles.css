@@ -547,52 +547,64 @@ p a {
 .modal-info {
   opacity: 0;
   visibility: hidden;
-  animation: 855.19325ms cubic-bezier(0.86, 0, 0.07, 1) 1127.27273ms fadeInModal forwards;
+  animation: 544.5ms cubic-bezier(0.86, 0, 0.07, 1) 1127.27273ms fadeInModal forwards;
   transform-origin: 0 100%; }
   .modal-info .info-modal--text-container * {
     opacity: 0;
     transform-origin: 50% 0;
-    animation: 570.12883ms cubic-bezier(0.86, 0, 0.07, 1) fadeInBottom forwards;
+    animation: 544.5ms cubic-bezier(0.86, 0, 0.07, 1) fadeInBottom forwards;
     animation-delay: 1860ms; }
-  .modal-info .info-modal--text-container h1 {
-    animation-delay: 2025ms; }
-  .modal-info .info-modal--text-container p:nth-child(2) {
-    animation-delay: 2132.25ms; }
-  .modal-info .info-modal--text-container p:nth-child(3) {
-    animation-delay: 2309.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(1) {
-    animation-delay: 2359.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(2) {
-    animation-delay: 2409.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(3) {
-    animation-delay: 2459.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(4) {
-    animation-delay: 2509.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(5) {
-    animation-delay: 2559.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(6) {
-    animation-delay: 2609.2125ms; }
-  .modal-info .info-modal--text-container .text-container__links li:nth-child(7) {
-    animation-delay: 2659.2125ms; }
-  .modal-info .info-modal--button {
-    animation: 570.12883ms cubic-bezier(0.86, 0, 0.07, 1) slideOut forwards;
-    animation-delay: 3082.98103ms; }
-    .modal-info .info-modal--button span {
-      animation: 570.12883ms cubic-bezier(0.86, 0, 0.07, 1) fadeIn forwards;
-      animation-delay: 2543.45935ms; }
+  .modal-info .info-modal--text-container *:nth-child(1) {
+    animation-delay: 1634.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(2) {
+    animation-delay: 1734.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(3) {
+    animation-delay: 1834.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(4) {
+    animation-delay: 1934.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(5) {
+    animation-delay: 2034.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(6) {
+    animation-delay: 2134.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(7) {
+    animation-delay: 2234.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(8) {
+    animation-delay: 2334.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(9) {
+    animation-delay: 2434.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(10) {
+    animation-delay: 2534.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(11) {
+    animation-delay: 2634.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(12) {
+    animation-delay: 2734.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(13) {
+    animation-delay: 2834.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(14) {
+    animation-delay: 2934.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(15) {
+    animation-delay: 3034.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(16) {
+    animation-delay: 3134.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(17) {
+    animation-delay: 3234.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(18) {
+    animation-delay: 3334.5ms; }
+  .modal-info .info-modal--text-container *:nth-child(19) {
+    animation-delay: 3434.5ms; }
 
 .scroll-indicator__down {
-  animation: 2280.51532ms scrollIndicator cubic-bezier(0.86, 0, 0.07, 1) infinite; }
+  animation: 2178ms scrollIndicator cubic-bezier(0.86, 0, 0.07, 1) infinite; }
 
 @keyframes fadeInBottom {
   0% {
     opacity: 0;
-    transform: translateY(35px) scaleY(0.5); }
+    transform: translateY(35px); }
   80% {
     opacity: 1; }
   100% {
     opacity: 1;
-    transform: translateY(0) scaleY(1); } }
+    transform: translateY(0); } }
 
 @keyframes fadeInModal {
   0% {
@@ -606,10 +618,6 @@ p a {
     opacity: 1;
     visibility: visible;
     transform: scaleY(1); } }
-
-@keyframes slideOut {
-  100% {
-    transform: translateX(35px); } }
 
 @keyframes scrollIndicator {
   0% {
