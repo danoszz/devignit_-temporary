@@ -1,7 +1,7 @@
 .modal-info {
 	opacity: 0;
 	visibility: hidden;
-	animation: $delay--total $transition--smooth ($delay__main / $ratio) fadeInModal forwards;
+	animation: $delay--total / 1.5 $t-smooth_two ($delay__main / $ratio) fadeInModal forwards;
 	transform-origin: 0 100%;
 
 	.info-modal--text-container {
@@ -27,7 +27,8 @@
 @keyframes fadeInBottom {
 	0% {
 		opacity: 0;
-		transform: translateY($column--width / 2);
+		transform: translate3d(0, 3rem, 0) rotateX(10deg) rotateY(-10deg) rotateZ(5deg);
+
 	}
 
 	80% {
@@ -36,7 +37,7 @@
 
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translate3d(0, 0, 0)  rotateX(0) rotateY(0) rotateZ(0);
 	}
 }
 @keyframes fadeInModal {
@@ -78,4 +79,10 @@
 		transform-origin: center bottom;
 		transform: scale(1, 1);
 	}
+}
+
+
+
+.scroll-indicator__down {
+	animation: ($delay--total * 4) scrollIndicator $t-smooth_one infinite;
 }

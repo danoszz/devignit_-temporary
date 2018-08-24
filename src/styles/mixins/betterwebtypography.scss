@@ -63,22 +63,13 @@ h1, h2, h3, h4, h5, p, a, blockquote {
 }
 
 
-// [ h1: font-size: [x value from scale], line-height: 2 * 30px, margin-top: 2 * 30px, margin-bottom: 1 * 30px ]
-$headings: (
-  h1: (2, 1.5, 1, 1),
-  h2: (1, 1.5, 2, 0.5),
-  h3: (0, 1.5, 2, 0.5),
-  h4: (0, 1, 1, 0),
-  h5: (0, 1, 1, 0),
-  h6: (0, 1, 1, 0)
-);
 
 // Set line-heights and margins for headings
 @each $heading, $properties in $headings {
   #{$heading} {
-    font-size: ms(nth($properties, 1));
+    font-size: ms(nth($properties, 2));
     @include line-height(nth($properties, 2));
-    @include margin-top(nth($properties, 3));
-    @include margin-bottom(nth($properties, 4));
+    @include margin-top(nth($properties, 2));
+    @include margin-bottom(nth($properties, 2));
   }
 }

@@ -10,7 +10,7 @@ notify      = require('gulp-notify');
 var serverConfig = {
 	server: "./" + project.foldersName.build,
 	port: project.port || 3000,
-	browser: ['google chrome'],
+	browser: ['firefox'],
 	notify: false,
 	minify: false,
 	ghostMode: false,
@@ -40,5 +40,5 @@ gulp.task('server', ['build'], function(cb) {
 	}
 
 
-	
+
 });
