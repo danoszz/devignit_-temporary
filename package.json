@@ -22,7 +22,7 @@
     "nk-css-utils": "^2.0.0",
     "size": "watsondg/size",
     "sniffer": "watsondg/sniffer",
-    "three": "^0.95.0",
+    "three": "^0.125.0",
     "underscore": "^1.8.3"
   },
   "devDependencies": {
