@@ -23,7 +23,7 @@
     "size": "watsondg/size",
     "sniffer": "watsondg/sniffer",
     "three": "^0.95.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
